@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Clock from './clock'; 
+import Toggle from './toggle';
+import LoggingButton from './loggingbutton'
 import logo from './logo.svg';
 import './App.css';
 
@@ -14,6 +16,8 @@ class App extends Component {
         <p className="App-intro">
           
         <Clock/>
+        <Toggle /><br/><br />
+        <LoggingButton />
         </p>
       </div>
     );

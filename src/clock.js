@@ -5,7 +5,7 @@ export default class Clock extends React.Component {
     super(props);
     this.state = {date: new Date()};
   }
-componentDidMount() {
+  componentDidMount() {
     this.timerID = setInterval(
       () => this.tick(),
       1000
@@ -19,11 +19,22 @@ componentDidMount() {
       date: new Date()
     });
   }
+ ActionLink() {
+  function handleClick(e) {
+    e.preventDefault();
+    console.log('The link was clicked.');
+  }
+ }
+
+  
   render() {
     return (
       <div>
         <h1>Hello, world!</h1>
         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+         <a href="#" onclick="console.log('The link was clicked.'); return false">
+            Click me
+          </a>
       </div>
     );
   }
