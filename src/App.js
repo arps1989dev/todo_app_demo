@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Clock from './clock'; 
 import Toggle from './toggle';
 import LoggingButton from './loggingbutton'
+import Greeting from './greeting'
 import logo from './logo.svg';
 import './App.css';
 
@@ -18,6 +19,7 @@ class App extends Component {
         <Clock/>
         <Toggle /><br/><br />
         <LoggingButton />
+        <Greeting isLoggedIn={true} />
         </p>
       </div>
     );
