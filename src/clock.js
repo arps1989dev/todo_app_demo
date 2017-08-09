@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 export default class Clock extends React.Component {
   constructor(props) {
@@ -19,12 +19,12 @@ export default class Clock extends React.Component {
       date: new Date()
     });
   }
- ActionLink() {
-  function handleClick(e) {
-    e.preventDefault();
-    console.log('The link was clicked.');
-  }
- }
+ 
+  // handleClick(e) {
+  //   e.preventDefault();
+  //   console.log('The link was clicked.');
+  // }
+ 
 
   
   render() {
@@ -32,7 +32,7 @@ export default class Clock extends React.Component {
       <div>
         <h1>Hello, world!</h1>
         <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
-         <a href="#" onclick="console.log('The link was clicked.'); return false">
+         <a target='_blank' href="#" onclick="console.log('The link was clicked.'); return false">
             Click me
           </a>
       </div>

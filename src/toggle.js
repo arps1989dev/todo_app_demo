@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 export default class Toggle extends React.Component {
-  constructor(props){
+	constructor(props){
 		super(props);
 		this.state = {isToggleOn: true};
 		this.handleClick = this.handleClick.bind(this);
