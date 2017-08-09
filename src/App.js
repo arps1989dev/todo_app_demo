@@ -11,6 +11,9 @@ import FlavorForm from './flavorform'
 import Reservation from './reservation'
 import Calculator from './calculator'
 import SignUpDialog from './signupdialog'
+import FilterableProductTable from './filterableproducttable'
+import HelloWorld from './helloworld'
+import NumberDescriber from './numberdescriber'
 
 
 
@@ -25,6 +28,14 @@ class App extends React.Component {
       {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
       {id: 2, title: 'Installation', content: 'You can install React from npm.'}
     ];
+    var PRODUCTS = [
+      {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
+      {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
+      {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
+      {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
+      {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
+      {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
+    ];
     // const doubled = numbers.map((number) => number * 2);
 
     return (
@@ -36,7 +47,7 @@ class App extends React.Component {
         </div>
         <p className="App-intro">
           
-        
+
         <Clock/>
         <Toggle /><br/><br />
         <LoggingButton />
@@ -51,6 +62,9 @@ class App extends React.Component {
         <Reservation />  <br/>      <hr />
         <Calculator />   <br/>			<hr />
         <SignUpDialog /> <br/>			<hr />
+        <FilterableProductTable products={PRODUCTS}  /> <br/>			<hr />
+        <HelloWorld />
+        <NumberDescriber numbers={numbers} />
         </p>
       </div>
     );

@@ -19,7 +19,7 @@ export default class Dialog extends React.Component {
     return (
       
       <FancyBorder color="blue">
-        hello
+        
         <h1 className="Dialog-title">
           {this.props.title}
         </h1>
